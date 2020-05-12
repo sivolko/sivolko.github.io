@@ -102,7 +102,8 @@ body {
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 300px) 
+<meta name="viewport" content="width=device-width" />{
   /* Place the timelime to the left */
   .timeline::after {
   left: 31px;
