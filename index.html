@@ -312,21 +312,12 @@ width="2" height="0">
 </embed>  -->
 
 	
-	myAudio = new Audio('song.mp3'); 
-if (typeof myAudio.loop == 'boolean')
-{
-    myAudio.loop = true;
-}
-else
-{
-    myAudio.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-}
+var myAudio = new Audio('song.mp3'); 
+myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
 myAudio.play();
-	
-	
 	
 </body>
 </html>
