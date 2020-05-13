@@ -307,9 +307,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 	
 
- <embed src="song.mp3" autostart="true"  loop="infinite"
+<!--  <embed src="song.mp3" autostart="true"  loop="infinite"
 width="2" height="0">
-</embed> 
+</embed>  -->
 
+	
+	myAudio = new Audio('song.mp3'); 
+if (typeof myAudio.loop == 'boolean')
+{
+    myAudio.loop = true;
+}
+else
+{
+    myAudio.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+myAudio.play();
+	
+	
+	
 </body>
 </html>
