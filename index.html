@@ -311,12 +311,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 width="2" height="0">
 </embed>  -->
 
-var myAudio = new Audio('song.mp3'); 
-myAudio.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-myAudio.play();
+var song = new Audio("song.mp3");
+song.loop = true;
+document.body.appendChild(song);​
 	
 </body>
 </html>
